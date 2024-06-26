@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './css/index.css';
-import Topbar from './components/TopBar';
 import reportWebVitals from './reportWebVitals';
+
+//Estilos css
+import './css/index.css';
+
+//Componentes
+import Topbar from './components/TopBar';
+import Footer from './components/Footer';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Topbar />
+    <Footer />
   </React.StrictMode>
 );
 
