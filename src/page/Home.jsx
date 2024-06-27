@@ -1,18 +1,15 @@
 import React from 'react'
+import { Helmet } from 'react-helmet';
 
 //Componentes
-import TopBar from '../components/TopBar'
-import Footer from '../components/Footer'
+import TopBar from '../components/TopBar';
+import Footer from '../components/Footer';
 import Categories from '../components/Categories';
 import HomeProducts from '../components/HomeProducts';
 
 //Imágenes
-import banner from '../assets/image/banner.webp'
-import moneda from '../assets/image/moneda.webp'
-
-//Estilos css
-import '../css/home-page.css';
-import '../css/index.css';
+import banner from '../assets/image/banner.webp';
+import moneda from '../assets/image/moneda.webp';
 
 //Datos - Esta infomación se debería obtener de la API
 const category = require('../data/category.js');
@@ -24,6 +21,10 @@ product = orderProducts(product);
 export default function Home() {
   return (
     <React.StrictMode>
+      <Helmet>
+        <link rel="preload" href="/css/home-page.css" as="style" />
+        <link rel="stylesheet" href="/css/home-page.css" />
+      </Helmet>
       <main>
         <TopBar/>
         <section id="slogan">
@@ -31,12 +32,12 @@ export default function Home() {
             <h1>Autoservicio Popular</h1>
             <p>Descubre los mejores productos para tu hogar al mejor precio, con la calidad, variedad y servicio que solo nosotros te podemos ofrecer.</p>
           </div>
-          <img src={banner} alt="Estanterías enfoque central" />
+          <img loading='lazy' src={banner} alt="Estanterías enfoque central" />
         </section>
         <Categories categoryData={category}/>
         <HomeProducts dataProducts={product}/>
         <section id="cta">
-          <img src={moneda} alt="Icono de moneda" />
+          <img loading='lazy' src={moneda} alt="Icono de moneda" />
           <div>
             <h2>Puntos fidelidad</h2>
             <p>

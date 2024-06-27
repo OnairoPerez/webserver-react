@@ -1,11 +1,12 @@
-import React from 'react'
-
-//Estilos css
-import '../css/products.css';
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
 export default function HomeProducts({dataProducts}) {
   return (
     <section id="productos">
+      <Helmet>
+        <link rel="stylesheet" href="/css/products.css" />
+      </Helmet>
       <div>
         <h2>Productos</h2>
         <p style={{textAlign: 'center'}}>
@@ -21,15 +22,15 @@ export default function HomeProducts({dataProducts}) {
         ))}
       </div>
     </section>
-  )
+  );
 }
 
 function ProductsCard({img, name}) {
   return (
     <article>
-      <img src={img} alt={name} />
+      <img loading='lazy' src={img} alt={name} />
       <p>{name}</p>
       <button>Carrito</button>
     </article>
-  )
+  );
 }

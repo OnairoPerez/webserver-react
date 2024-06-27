@@ -1,11 +1,12 @@
-import React from 'react'
-
-//Estilos css
-import '../css/categories.css'
+import React from 'react';
+import { Helmet } from 'react-helmet';
 
 export default function Categories({categoryData}) {
   return (
     <section id="categorias">
+        <Helmet>
+            <link rel="stylesheet" href="/css/categories.css" />
+        </Helmet>
         <h2>Categorias</h2>
         <div>
             {categoryData.map((category) => (
