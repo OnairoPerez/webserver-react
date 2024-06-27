@@ -8,12 +8,17 @@ import './css/index.css';
 //Componentes
 import Topbar from './components/TopBar';
 import Footer from './components/Footer';
+import Categories from './components/Categories';
+
+//Datos
+const category = require('./data/category.js');
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Topbar />
+    <Categories categoryData={category}/>
     <Footer />
   </React.StrictMode>
 );
