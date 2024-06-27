@@ -23,31 +23,33 @@ product = orderProducts(product);
 
 export default function Home() {
   return (
-    <main>
-      <TopBar/>
-      <section id="slogan">
-        <div>
-          <h1>Autoservicio Popular</h1>
-          <p>Descubre los mejores productos para tu hogar al mejor precio, con la calidad, variedad y servicio que solo nosotros te podemos ofrecer.</p>
-        </div>
-        <img src={banner} alt="Estanterías enfoque central" />
-      </section>
-      <Categories categoryData={category}/>
-      <HomeProducts dataProducts={product}/>
-      <section id="cta">
-        <img src={moneda} alt="Icono de moneda" />
-        <div>
-          <h2>Puntos fidelidad</h2>
-          <p>
-            Aprovecha nuestro sistema de puntos y canjea los 
-            mejores productos por tu fidelidad. Regístrate 
-            y empieza a acumular puntos con cada compra que 
-            hagas.
-          </p>
-        </div>
-      </section>
+    <React.StrictMode>
+      <main>
+        <TopBar/>
+        <section id="slogan">
+          <div>
+            <h1>Autoservicio Popular</h1>
+            <p>Descubre los mejores productos para tu hogar al mejor precio, con la calidad, variedad y servicio que solo nosotros te podemos ofrecer.</p>
+          </div>
+          <img src={banner} alt="Estanterías enfoque central" />
+        </section>
+        <Categories categoryData={category}/>
+        <HomeProducts dataProducts={product}/>
+        <section id="cta">
+          <img src={moneda} alt="Icono de moneda" />
+          <div>
+            <h2>Puntos fidelidad</h2>
+            <p>
+              Aprovecha nuestro sistema de puntos y canjea los 
+              mejores productos por tu fidelidad. Regístrate 
+              y empieza a acumular puntos con cada compra que 
+              hagas.
+            </p>
+          </div>
+        </section>
+      </main>
       <Footer/>
-    </main>
+    </React.StrictMode>
   );
 }
 
