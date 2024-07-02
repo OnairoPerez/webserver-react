@@ -23,11 +23,7 @@ export default function RegistrationForm() {
             <input type="text" name="city" form="formulario" autocomplete="off" placeholder="Ciudad" required />
           </div>
         </fieldset>
-        <button className="info display" type="button">Siguiente</button>
-        <button id="return" class="account display" type="button" style={{display: 'none'}}>
-          <svg  xmlns="http://www.w3.org/2000/svg"  width="30"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-back-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 14l-4 -4l4 -4" /><path d="M5 10h11a4 4 0 1 1 0 8h-1" /></svg>
-        </button>
-        <fieldset class="sectionform account" style={{display: 'none'}}>
+        <fieldset class="sectionform account" >
           <legend>Crear cuenta</legend>
           <input type="email" name="email" form="formulario" autocomplete="off" placeholder="Correo Elctrónico" style={{marginBottom: '15px'}} />
           <div id="password">
@@ -37,7 +33,9 @@ export default function RegistrationForm() {
             </button>
           </div>
           <input type="password" autocomplete="off" placeholder="Confirmar contraseña" required/>
-          <button class="account" type="submit" style={{display: 'none'}}>Registrarce</button>
+          <div id='regButton'>
+            <button class="account" type="submit">Registrarce</button>
+          </div>
         </fieldset>
       </form>
     </React.StrictMode>
