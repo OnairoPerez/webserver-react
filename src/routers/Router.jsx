@@ -8,6 +8,7 @@ import LoginForm from '../components/LoginForm';
 import RegistrationForm from '../components/RegistrationForm';
 import Search from '../page/Search';
 import ShoppingCart from '../page/ShoppingCart';
+import Products from '../page/Products';
 
 export default function router() {
   return (
@@ -17,6 +18,7 @@ export default function router() {
         <Route path='/registro' element={<BaseTemplate><RegistrationForm/></BaseTemplate>}/>
         <Route path='/buscador' element={<Search/>}/>
         <Route path='/carrito' element={<ShoppingCart/>}/>
+        <Route path='/producto' element={<Products/>}></Route>
         <Route path='*' element={<p><strong>Error 404</strong> Página no encontrada</p>}/>
     </Routes>
   )
